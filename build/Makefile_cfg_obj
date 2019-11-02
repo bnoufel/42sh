@@ -1,0 +1,82 @@
+$(OBJSDIR)/$(AUTOCOMPL)/%.o: $(SRCSDIR)/$(AUTOCOMPL)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${RED}█${RESET}\c"
+
+$(OBJSDIR)/$(CORE)/%.o: $(SRCSDIR)/$(CORE)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${RED}█${RESET}\c"
+
+$(OBJSDIR)/$(LEXER)/%.o: $(SRCSDIR)/$(LEXER)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${RED}█${RESET}\c"
+
+$(OBJSDIR)/$(REDIRECT)/%.o: $(SRCSDIR)/$(REDIRECT)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${YELLOW}█${RESET}\c"
+
+$(OBJSDIR)/$(TERMCAPS)/%.o: $(SRCSDIR)/$(TERMCAPS)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${YELLOW}█${RESET}\c"
+
+$(OBJSDIR)/$(HASH)/%.o: $(SRCSDIR)/$(HASH)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${YELLOW}█${RESET}\c"
+
+$(OBJSDIR)/$(HISTORY)/%.o: $(SRCSDIR)/$(HISTORY)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${YELLOW}█${RESET}\c"
+
+$(OBJSDIR)/$(SUBSHELL)/%.o: $(SRCSDIR)/$(SUBSHELL)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${YELLOW}█${RESET}\c"
+
+$(OBJSDIR)/$(COMPARE)/%.o: $(SRCSDIR)/$(COMPARE)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${YELLOW}█${RESET}\c"
+
+$(OBJSDIR)/$(LST)/%.o: $(SRCSDIR)/$(LST)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR)/$(GLOB)/%.o: $(SRCSDIR)/$(GLOB)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR)/$(BUILTIN)/%.o: $(SRCSDIR)/$(BUILTIN)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR)/$(JOBS)/%.o: $(SRCSDIR)/$(JOBS)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR)/$(SIGNAL)/%.o: $(SRCSDIR)/$(SIGNAL)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR)/$(EXEC)/%.o: $(SRCSDIR)/$(EXEC)/%.c $(HEADERS)
+	@$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+	@echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR)/$(SCRIPT)/%.o: $(SRCSDIR)/$(SCRIPT)/%.c $(HEADERS)
+	    @$(CC) -c -o $@ $< -I$(INCLUDES) -I$(HEADERLIB)
+		    @echo "${GREEN}█${RESET}\c"
+
+$(OBJSDIR):
+	@mkdir -p $(OBJSDIR)/$(AUTOCOMPL);
+	@mkdir -p $(OBJSDIR)/$(BUILTIN);
+	@mkdir -p $(OBJSDIR)/$(CORE);
+	@mkdir -p $(OBJSDIR)/$(GLOB);
+	@mkdir -p $(OBJSDIR)/$(HASH);
+	@mkdir -p $(OBJSDIR)/$(HISTORY);
+	@mkdir -p $(OBJSDIR)/$(JOBS);
+	@mkdir -p $(OBJSDIR)/$(LEXER);
+	@mkdir -p $(OBJSDIR)/$(LST);
+	@mkdir -p $(OBJSDIR)/$(REDIRECT);
+	@mkdir -p $(OBJSDIR)/$(COMPARE);
+	@mkdir -p $(OBJSDIR)/$(SUBSHELL);
+	@mkdir -p $(OBJSDIR)/$(TERMCAPS);
+	@mkdir -p $(OBJSDIR)/$(SIGNAL);
+	@mkdir -p $(OBJSDIR)/$(EXEC);
+	@mkdir -p $(OBJSDIR)/$(SCRIPT);
+	@echo "\nCompiling $(NAME)${RESET} [${GREEN}✔${RESET}]"

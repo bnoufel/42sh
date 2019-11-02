@@ -1,0 +1,17 @@
+RED 		= 	\x1b[31m
+YELLOW	 	= 	\x1b[33m
+GREEN 		= 	\x1b[32m
+BLEUE 		= 	\x1b[34m
+RESET 		= 	\x1b[0m
+SRCSDIR 	= 	../srcs
+OBJSDIR 	= 	../objects
+INCLUDES 	= 	../includes
+LIBFTDIR	=	../libft
+LIB			=	libft.a
+LIBD      	=   $(LIBFTDIR)/$(LIB)
+HEADERLIB   =   	$(LIBFTDIR)/includes/
+LDFLAGS 	= 	-L$(LIBFTDIR) -lft -ltermcap
+CFLAGS 		=  	-Wall -Werror -Wextra
+CC 			= 	gcc $(CFLAGS)
+HEADER		=	mysh.h glob.h minishell.h myterm.h jobs.h equalizer.h script.h
+HEADERS		=	$(addprefix $(INCLUDES)/, $(HEADER))

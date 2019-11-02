@@ -1,0 +1,27 @@
+SRCSAUTOCOMP    = 	$(addprefix $(AUTOCOMPL)/, $(SRCAUTOCOMPL))
+SRCSBUILTIN     = 	$(addprefix $(BUILTIN)/, $(SRCBUILTIN))
+SRCSCORE        = 	$(addprefix $(CORE)/, $(SRCCORE))
+SRCSGLOB        = 	$(addprefix $(GLOB)/, $(SRCGLOB))
+SRCSHASH		=	$(addprefix $(HASH)/, $(SRCHASH))
+SRCSHISTORY     = 	$(addprefix $(HISTORY)/, $(SRCHISTORY))
+SRCSJOBS        = 	$(addprefix $(JOBS)/, $(SRCJOBS))
+SRCSLEXER       = 	$(addprefix $(LEXER)/, $(SRCLEXER))
+SRCSLST         = 	$(addprefix $(LST)/, $(SRCLST))
+SRCSREDIRECT    = 	$(addprefix $(REDIRECT)/, $(SRCREDIRECT))
+SRCSCOMPARE     = 	$(addprefix $(COMPARE)/, $(SRCCOMPARE))
+SRCSSUBSHELL    = 	$(addprefix $(SUBSHELL)/, $(SRCSUBSHELL))
+SRCSTERMCAPS    = 	$(addprefix $(TERMCAPS)/, $(SRCTERMCAPS))
+SRCSSIGNAL      =   $(addprefix $(SIGNAL)/, $(SRCSIGNAL))
+SRCSEXEC        =   $(addprefix $(EXEC)/, $(SRCEXEC))
+SRCSSCRIPT		=	$(addprefix $(SCRIPT)/, $(SRCSCRIPT))
+
+SRC 		    =   $(SRCSAUTOCOMP) $(SRCSCORE) $(SRCSLEXER) $(SRCSREDIRECT) \
+					$(SRCSTERMCAPS) $(SRCSHASH) $(SRCSHISTORY) \
+                    $(SRCSSUBSHELL) $(SRCSCOMPARE) $(SRCSLST) \
+                    $(SRCSGLOB) $(SRCSBUILTIN) \
+					$(SRCSSIGNAL) $(SRCSEXEC) $(SRCSJOBS) $(SRCSSCRIPT)
+
+OBJ 		= 	$(SRC:%.c=%.o)
+
+SRCS 		= 	$(addprefix $(SRCSDIR)/, $(SRC))
+OBJS 		= 	$(addprefix $(OBJSDIR)/, $(OBJ))

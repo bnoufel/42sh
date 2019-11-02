@@ -1,0 +1,59 @@
+AUTOCOMPL = autocompletions
+BUILTIN   = builtin
+CORE      = core
+EXEC      = exec
+GLOB      = glob
+HASH      = hash
+HISTORY   = history
+LEXER     = lexer
+LST       = lst
+REDIRECT  = redirections
+COMPARE   = compare
+SUBSHELL  = subshell
+TERMCAPS  = termcaps
+SIGNAL    = signal
+JOBS      = jobs
+SCRIPT	  = shell_scripts
+
+
+SRCAUTOCOMPL =  compl.c take_autocompl.c get_ac.c list_auto.c ac_bin.c \
+                ac_path.c ac_match.c ac_folder.c ft_ac_color.c find_elem.c \
+				display_compl.c fill_line.c add_slash.c ac_free.c ac_misc.c
+SRCBUILTIN  =   builtin.c complexenv.c env_utils.c handle_dir.c \
+                handle_dir2.c handledots.c helpenv.c helpenv2.c helpenv3.c \
+				helpvars.c helpbuiltin.c read.c set_export.c set_export_2.c unset.c \
+				helpbuiltin2.c
+SRCCORE     =   eval.c utils.c main.c helpmain.c helpmain2.c helpmain3.c \
+				helpmain4.c mini_read.c reall_str.c prompt.c gnl.c \
+				prompt2.c mini_loop.c init.c
+SRCEXEC     =   exec.c helpexec.c helpexec2.c helpexec3.c helpexec4.c tryxbin.c
+SRCGLOB     =   bind_braces.c bind_braces2.c braces_parser.c check.c check2.c \
+                dupspec.c freestructs.c ft_glob_core.c hook.c star_query.c \
+				star_query2.c split_line_to_read_braces.c split_line_to_read_hook.c \
+				split_line_to_read_star.c 
+SRCHASH		=	get_bin.c hash.c hash_function.c
+SRCHISTORY  =   history.c search.c term_history.c find.c mark.c mark2.c mark_misc.c \
+                mark_number.c mark_char.c builtin_history.c find2.c
+SRCLEXER    =   avdelim.c helptoparse.c helptoparse2.c helptoparse3.c \
+			    rewriteavs.c helptoparse4.c helptoparse5.c
+SRCLST      =   ft_list_clear.c ft_list_nchange_if.c lst_line.c\
+                ft_list_remove_if.c ft_plist_clear.c removeifsame.c \
+                listlen.c lst_line2.c
+SRCREDIRECT =   fds.c fds2.c fds3.c
+SRCSCRIPTS  =
+SRCCOMPARE  =	the_equalizer.c equalizer_args.c \
+                equalizer_check_file.c equalizer_check_file2.c \
+                equalizer_check_file3.c equalizer_check_int_string.c \
+                equalizer_error.c equalizer_struct.c equalizer_core.c
+SRCSUBSHELL =   conversion.c helpmath.c helpmath2.c helpmath3.c \
+				helpmath4.c helpmath5.c helpmath6.c helpmath7.c mathop.c \
+				priorites.c subshell.c helpinsub.c
+SRCTERMCAPS =   cx_cc_cv.c myterm.c option.c cx_cc_cv2.c l_d_r_u.c term_history.c \
+                term_before_parser.c jump_words.c fun_sh.c fun_sh2.c ft_enter.c \
+				helpterm.c helpterm2.c
+SRCSIGNAL   =   signal.c
+SRCJOBS     =   jobs.c sh_fg.c clean_job.c display_job.c job_misc.c list_jobs.c \
+                wake_up.c after_wait.c
+SRCSCRIPT	=	msc.c while_tokenizer.c if_tokenizer_2.c script_tokenizer.c \
+				for_tokenizer.c substitutions.c helpscript.c if_tokenizer.c \
+				for_tokenizer_2.c msc_2.c if_tokenizer_3.c while_tokenizer_2.c
